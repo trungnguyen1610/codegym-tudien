@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ENG = ["FUCK","MOM","YOU"]
+
+    </h1>
+    <h1>
+        VN = ["YÊU","MẸ","BẠN"]
+    </h1>
+    ENG:<input type="text" id="inputTxt">
+    <input type="button" value="Translate" onclick="trans()">
+    <div id="result"></div>
+    <script>
+        let result = document.getElementById("result");
+        function trans() {
+            let input = document.getElementById("inputTxt").value;
+            let ENG = ["fuck", "mom", "you"];
+            let VN = ["yêu", "mẹ", "bạn"];
+            for (i = 0; i < ENG.length; i++) {
+                if (input.toLowerCase() == ENG[i]) {
+                    result.innerHTML = `${input} ==> ${VN[i]}`;
+                    break;
+                } else {
+                    result.innerHTML = " No data Found"
+                }
+            }
+        }
+        //duyet mang
+    </script>
+</body>
+
+</html>
